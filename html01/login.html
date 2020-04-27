@@ -5,13 +5,13 @@
     <title>Login</title>
 </head>
 <body>
-        <form action = " http://127.0.0.1:50/login/display" method = "POST">
-            <p>Username<input type="text" name="user"></p>
+        <form  method=POST action= " {{ url_for('login') }}" >
+            <p>  Username<input type="text" name="user"> </p>
             <p>Password<input type="password" name="pass"/></p>
             <p><input type = "submit" value = "login" /></p>
         </form>
-        <form action = " http://127.0.0.1:50/back" method = "POST">
+        <form action = " http://127.0.0.1:80/register" method = "POST">
             <p>No account yet?</p>
-            <button>Sign Up </button>
+            <a href="{{ url_for('submit') }}">Sign up here</a>
         </form>
 </html>

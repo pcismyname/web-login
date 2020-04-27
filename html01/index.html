@@ -17,7 +17,7 @@
 <body>
 
 
-<form name="Form" action = " http://127.0.0.1:50/" method = "POST"  onsubmit="return validateForm()">
+<form name="Form" action = " http://127.0.0.1:80/register" method = "POST"  onsubmit="return validateForm()">
     <p>Name <input type = "text" name = "name" /></p>
     <p>Surename <input type="text"name = "surename"/></p>
     <p>Email <input type = "email" name = "email" /></p>
@@ -29,10 +29,9 @@
     <p><input type = "submit" value = "submit" /></p>
 </form>
 
+
 <p>Have a account?</p>
-<form action = " http://127.0.0.1:50/login" method = "POST">
-    <button>Sign In </button>
-</form>
+<a href="{{ url_for('login') }}">Sign in here</a>
 
 
 </body>
